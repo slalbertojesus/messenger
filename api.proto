@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "./grpc";
+
+package api;
+
+message PingMessage {
+  string greeting = 1;
+}
+
+service Ping {
+  rpc YesHello(PingMessage) returns (PingMessage) {}
+}
